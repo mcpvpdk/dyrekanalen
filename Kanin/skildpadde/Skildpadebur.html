@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkildpaddeBur - dyreKanalen</title>
+    <link rel="stylesheet" href="../forside/style.css">
+    <script src="../forside/script.js" defer></script>
+
+    <style>
+        .hero {
+            background-image: url('skildpaddebur-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(to right, #43c6ac, #191654);
+        }
+        .hero h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            color: white;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2em;
+        }
+        .header h1 {
+            margin: 0;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+        .nav {
+            background-color: #34495e;
+            padding: 1em 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .nav-logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+        .nav a:hover, .nav a.active {
+            background-color: #2c3e50;
+            transform: translateY(-2px);
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #34495e;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            display: block;
+            padding: 12px 16px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        .search-bar input {
+            padding: 5px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+        .search-bar button {
+            background-color: #43c6ac;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .content {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #43c6ac;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h3 {
+            color: #43c6ac;
+        }
+        .footer {
+            background-color: #34495e;
+            color: white;
+            padding: 2em 0;
+            text-align: center;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            transition: background-color 0.3s;
+        }
+        .footer-links a:hover {
+            background-color: #2c3e50;
+        }
+            /* ... (previous styles remain the same) ... */
+            .turtle-types {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 30px;
+            }
+            .turtle-type {
+                flex: 1;
+                margin: 0 15px;
+                padding: 20px;
+                background-color: #f1f8e9;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            .turtle-type h3 {
+                color: #43c6ac;
+                border-bottom: 2px solid #43c6ac;
+                padding-bottom: 10px;
+            }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="../forside/index.html" class="nav-logo">dyreKanalen</a>
+            <div class="nav-links">
+                <a href="../forside/index.html">Forside</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn">KaninKanalen</button>
+                    <div class="dropdown-content">
+                        <a href="../kanin/Kaninkanalen.html">Kaninkanalen</a>
+                        <a href="../kanin/kaninmad.html">Kaninmad</a>
+                        <a href="../kanin/tibur.html">Til buret</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Kattekanalen</button>
+                    <div class="dropdown-content">
+                        <a href="../kattekanalen/Kattekanalen.html">Kattekanalen</a>
+                        <a href="../kattekanalen/Kattefoder.html">kattefoder</a>
+                        <a href="../kattekanalen/Kattelegetøj.html">Kattelegetøj</a>
+                        <a href="../kattekanalen/Kattepleje.html">Kattepleje</a>
+                        <a href="../kattekanalen/Katteudstyr.html">Katteudstyr</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">SkildpaddeKanalen</button>
+                    <div class="dropdown-content">
+                        <a href="skildpadde.html">SkildpaddeKanalen</a>
+                        <a href="skildpadefoder.html">Skildpadefoder</a>
+                        <a href="Skildpadebur.html" class="active">SkildpaddeBur</a>
+                        <a href="skildpaddepleje.html">skildpaddepleje</a>
+                        <a href="skildpaddeUdstyr.html">SkildpaddeUdstyr</a>
+                    </div>
+                </div>
+                <a href="../tips/tips-og-tricks.html">Tips og Tricks</a>
+                <a href="../forside/om-os.html">Om Os</a>
+            </div>
+        </div>
+    </nav>
+
+
+        <!-- ... (navigation remains the same) ... -->
+    
+        <div class="hero">
+            <h1>Skildpaddebur og Akvarier</h1>
+        </div>
+    
+        <div class="content">
+            <h2>Vælg det Rigtige Hjem til Din Skildpadde</h2>
+            
+            <p>Skildpadder kan være enten land- eller vandlevende, og deres behov for bur eller akvarium varierer betydeligt. Her er en guide til begge typer:</p>
+    
+            <div class="turtle-types">
+                <div class="turtle-type">
+                    <h3>Landskildpadder</h3>
+                    <img src="landskildpaddebur.jpg" alt="Landskildpaddebur">
+                    <p>Landskildpadder har brug for et terrarium med følgende egenskaber:</p>
+                    <ul>
+                        <li>Størrelse: Mindst 10 gange skildpaddens længde i længden og bredden</li>
+                        <li>Substrat: Jord, kokosfibre eller andet gravbart materiale</li>
+                        <li>Skjulesteder: Huler og vegetation</li>
+                        <li>Varmelampe: For at skabe et varmere område</li>
+                        <li>UV-lys: For D-vitamin syntese</li>
+                        <li>Vandskål: Lavt og stabilt til drikkevand og badning</li>
+                    </ul>
+                </div>
+    
+                <div class="turtle-type">
+                    <h3>Vandskildpadder</h3>
+                    <img src="vandskildpaddeakvarium.jpg" alt="Vandskildpaddeakvarium">
+                    <p>Vandskildpadder kræver et akvarium med disse elementer:</p>
+                    <ul>
+                        <li>Størrelse: Mindst 10 gange skildpaddens længde i længde, bredde og højde</li>
+                        <li>Vanddybde: Tilstrækkelig til at skildpadden kan svømme og dykke</li>
+                        <li>Landområde: En tør platform for solbadning</li>
+                        <li>Effektivt filtersystem: For at holde vandet rent</li>
+                        <li>Varmelampe: Over landområdet</li>
+                        <li>UV-lys: For D-vitamin syntese</li>
+                        <li>Dekorationer: Sten, træstammer og vandplanter</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <h2>Generelt Tilbehør til Skildpadder</h2>
+            <p>Uanset om du har en land- eller vandskildpadde, er følgende tilbehør vigtigt:</p>
+            <ul>
+                <li>Termometer og hygrometer: For at overvåge temperatur og luftfugtighed</li>
+                <li>Varmelampe og UV-lampe: For optimal sundhed</li>
+                <li>Foder- og vandskåle: Lave og stabile</li>
+                <li>Rengøringsudstyr: For regelmæssig vedligeholdelse</li>
+            </ul>
+    
+            <p>Husk, at et godt skildpaddehjem er nøglen til din skildpaddes sundhed og trivsel. Giv din skildpadde et rummeligt, sikkert og stimulerende miljø, der efterligner dens naturlige habitat, for at sikre et langt og lykkeligt liv.</p>
+        </div>
+    
+        <!-- ... (footer remains the same) ... -->
+    </body>
+    </html>
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="../forside/index.html">Forside</a>
+            <a href="../kattekanalen/Kattekanalen.html">Katte</a>
+            <a href="../kanin/Kaninkanalen.html">Kaniner</a>
+            <a href="skildpadde.html">Skildpadde</a>
+            <a href="../tips/tips-og-tricks.html">Tips og Tricks</a>
+            <a href="../forside/om-os.html">Om Os</a>
+            <a href="../forside/kontakt.html">Kontakt</a>
+            <a href="../forside/nyhedsbrev.html">Tilmeld Nyhedsbrev</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KatteKanalen</title>
+    <link rel="stylesheet" href="../forside/style.css">
+    <script src="../forside/script.js" defer></script>
+
+    <style>
+        .hero {
+            background-image: url('cat-background.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(to right, #f6d365, #fda085);
+        }
+        .hero h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2em;
+        }
+        .header h1 {
+            margin: 0;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+        .nav {
+            background-color: #34495e;
+            padding: 1em 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .nav-logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+        .nav a:hover, .nav a.active {
+            background-color: #2c3e50;
+            transform: translateY(-2px);
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #34495e;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            display: block;
+            padding: 12px 16px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        .search-bar input {
+            padding: 5px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+        .search-bar button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .content {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        .animal-category {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        .animal-category:last-child {
+            border-bottom: none;
+        }
+        .animal-category img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .footer {
+            background-color: #34495e;
+            color: white;
+            padding: 2em 0;
+            text-align: center;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            transition: background-color 0.3s;
+        }
+        .footer-links a:hover {
+            background-color: #2c3e50;
+        }
+        .latest-news, .featured-articles {
+            margin-bottom: 2rem;
+        }
+        
+        .news-grid, .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .news-item, .featured-article {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .news-item:hover, .featured-article:hover {
+            transform: translateY(-5px);
+        }
+        
+        .news-item img, .featured-article img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .news-item h3, .featured-article h3 {
+            padding: 1rem;
+            margin: 0;
+        }
+        
+        .news-item p, .featured-article p {
+            padding: 0 1rem;
+        }
+        
+        .news-item a, .featured-article a {
+            display: inline-block;
+            margin: 1rem;
+            padding: 0.5rem 1rem;
+            background: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>KatteKanalen</h1>
+    </header>
+
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="../forside/index.html" class="nav-logo">DyreKanalen</a>
+            <div class="nav-links">
+                <a href="../forside/index.html">Forside</a>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">KaninKanalen</a>
+                    <div class="dropdown-content">
+                        <a href="../kanin/Kaninkanalen.html">KaninKanalen</a>
+                        <a href="../kanin/kaninmad.html">Kaninmad</a>
+                        <a href="../kanin/tibur.html">Til buret</a>
+                        <a href="../kanin/græne.html">Grønne</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                  <button class="dropbtn">Kattekanalen</button>
+                  <div class="dropdown-content">
+                      <a href="../kattekanalen/Kattekanalen.html">Kattekanalen</a>
+                          <a href="Kattefoder.html">kattefoder</a>
+                          <a href="Kattelegetøj.html">Kattelegetøj</a>
+                          <a href="Kattepleje.html">Kattepleje</a>
+                          <a href="Katteudstyr.html">Katteudstyr</a>
+
+                          </div>
+                          
+                      </div>
+                      <div class="dropdown">
+                          <button class="dropbtn">SkildpaddeKanalen</button>
+                          <div class="dropdown-content">
+                              <a href="../skildpadde/skildpadde.html">SkildpaddeKanalen</a>
+                                  <a href="../skildpadde/skildpadefoder.html">Skildpadefoder</a>
+                                  <a href="../skildpadde/Skildpadebur.html">SkildpaddeBur/a>
+                                  <a href="../skildpadde/skildpaddepleje.html">skildpaddepleje</a>
+                                  <a href="../skildpadde/skildpadde.html">SkildpaddeUdstyr</a>
+                                  </div>
+
+                                  </div>
+            </div>
+            <a href="../tips/tips-og-tricks.html">Tips og Tricks</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+      <h1>Velkommen til KatteKanalen</h1>
+  </div>
+
+  <main class="content">
+      <h2>Alt om Katte</h2>
+      <p>Her finder du information om kattepleje, ernæring, adfærd og meget mere.</p>
+
+      <section class="animal-category">
+          <h3>Kattepleje</h3>
+          <img src="cat-grooming.jpg" alt="Kat bliver børstet">
+          <p>Lær hvordan du plejer din kat og holder dens pels sund og skinnende.</p>
+      </section>
+
+      <section class="animal-category">
+          <h3>Kattemad</h3>
+          <img src="cat-food.jpg" alt="Katteskål med mad">
+          <p>Få indsigt i den rette ernæring for din kat og tips til sunde måltider.</p>
+      </section>
+
+      <section class="animal-category">
+          <h3>Kattelegetøj</h3>
+          <img src="cat-toys.jpg" alt="Forskellige kattelegetøj">
+          <p>Opdagde det bedste legetøj til at holde din kat aktiv og underholdt.</p>
+      </section>
+  </main>
+    <main class="content">
+        <section class="latest-news">
+            <h2>Seneste Nyt</h2>
+            <div class="news-grid">
+                <article class="news-item">
+                    <img src="news1.jpg" alt="Seneste nyhed 1">
+                    <h3>Ny Forskning i Kattens Adfærd</h3>
+                    <p>Forskere har opdaget fascinerende mønstre i kattens sociale interaktioner...</p>
+                    <a href="nyhed1.html">Læs mere</a>
+                </article>
+                <article class="news-item">
+                    <img src="news2.jpg" alt="Seneste nyhed 2">
+                    <h3>Innovative Kaninfodringstekniker</h3>
+                    <p>Nye metoder til at forbedre kaninens kost og sundhed...</p>
+                    <a href="nyhed2.html">Læs mere</a>
+                </article>
+                <article class="news-item">
+                    <img src="news3.jpg" alt="Seneste nyhed 3">
+                    <h3>Skildpadder og Klimaforandringer</h3>
+                    <p>Hvordan påvirker globale klimaændringer skildpadders levesteder?</p>
+                    <a href="nyhed3.html">Læs mere</a>
+                </article>
+            </div>
+        </section>
+    
+        <section class="featured-articles">
+            <h2>Udvalgte Artikler</h2>
+            <div class="article-grid">
+                <article class="featured-article">
+                    <img src="article1.jpg" alt="Artikel 1">
+                    <h3>10 Tips til Kattepleje</h3>
+                    <p>Lær hvordan du kan give din kat det bedste liv...</p>
+                    <a href="artikel1.html">Læs mere</a>
+                </article>
+                <article class="featured-article">
+                    <img src="article2.jpg" alt="Artikel 2">
+                    <h3>Kaninens Kost</h3>
+                    <p>Alt om den rigtige ernæring for din kanin...</p>
+                    <a href="artikel2.html">Læs mere</a>
+                </article>
+                <article class="featured-article">
+                    <img src="article3.jpg" alt="Artikel 3">
+                    <h3>Skildpaddens Habitat</h3>
+                    <p>Sådan skaber du det perfekte miljø for din skildpadde...</p>
+                    <a href="artikel3.html">Læs mere</a>
+                </article>
+            </div>
+        </section>
+    
+        <!-- Rest of the content... -->
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="../forside/index.html">Forside</a>
+            <a href="../kanin/Kaninkanalen.html">KaninKanalen</a>
+            <a href="../kattekanalen/Kattekanalen.html">KatteKanalen</a>
+            <a href="../skildpadde/skildpadde.html">SkildpaddeKanalen</a>
+            <a href="../tips/tips-og-tricks.html">Tips og Tricks</a>
+            <a href="../forside/om-os.html">Om Os</a>
+            <a href="../forside/kontakt.html">Kontakt</a>
+            <a href="../forside/nyhedsbrev.html">Tilmeld Nyhedsbrev</a>
+        </div>
+    </footer>
+</body>
+</html>

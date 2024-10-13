@@ -1,0 +1,195 @@
+/* Hero Section */
+.hero {
+    background-image: url('rabbit-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Featured Articles */
+.featured-articles {
+    padding: 2em 0;
+    background-color: #f8f9fa;
+}
+
+.featured-articles h2 {
+    text-align: center;
+    margin-bottom: 1.5em;
+    color: #2c3e50;
+    font-size: 2.5em;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.featured-article {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.featured-article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.featured-article h3 {
+    padding: 1rem;
+    margin: 0;
+    color: #2c3e50;
+}
+
+.featured-article p {
+    padding: 0 1rem;
+    color: #7f8c8d;
+}
+
+.featured-article a {
+    display: inline-block;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    background: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.featured-article a:hover {
+    background-color: #c0392b;
+}
+
+/* Testimonials */
+.testimonials {
+    background-color: #ecf0f1;
+    padding: 3rem 0;
+}
+
+.testimonials h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+.testimonial-slider {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.testimonial img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.testimonial p {
+    font-style: italic;
+    color: #34495e;
+    margin-bottom: 0.5rem;
+}
+
+.testimonial span {
+    color: #7f8c8d;
+    font-size: 0.9em;
+}
+
+/* Quick Tips */
+.quick-tips {
+    padding: 3rem 0;
+    background-color: #f8f9fa;
+}
+
+.quick-tips h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+.tip-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.tip {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tip:hover {
+    transform: translateY(-5px);
+}
+
+.tip i {
+    font-size: 2em;
+    color: #e74c3c;
+    margin-bottom: 1rem;
+}
+
+.tip p {
+    color: #34495e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .article-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-slider {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tip-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

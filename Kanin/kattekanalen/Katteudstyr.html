@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katteudstyr - KatteKanalen</title>
+    <link rel="stylesheet" href="../forside/style.css">
+    <script src="../forside/script.js" defer></script>
+
+    <style>
+        .hero {
+            background-image: url('cat-equipment-background.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(to right, #f6d365, #fda085);
+        }
+        .hero h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            color: white;
+        }
+
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .equipment-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .equipment-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .equipment-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .equipment-item h3 {
+            padding: 10px;
+            margin: 0;
+            font-size: 1.2em;
+            color: #2c3e50;
+        }
+
+        .equipment-item p {
+            padding: 0 10px 10px;
+            margin: 0;
+            font-size: 0.9em;
+        }
+        .latest-news, .featured-articles {
+        margin-top: 40px;
+    }
+
+    .news-grid, .article-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .news-item, .featured-article {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+
+    .news-item:hover, .featured-article:hover {
+        transform: translateY(-5px);
+    }
+
+    .news-item img, .featured-article img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .news-item h3, .featured-article h3 {
+        padding: 10px;
+        margin: 0;
+        font-size: 1.2em;
+        color: #2c3e50;
+    }
+
+    .news-item p, .featured-article p {
+        padding: 0 10px 10px;
+        margin: 0;
+        font-size: 0.9em;
+    }
+
+    .news-item a, .featured-article a {
+        display: inline-block;
+        margin: 10px;
+        padding: 5px 10px;
+        background-color: #3498db;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .news-item a:hover, .featured-article a:hover {
+        background-color: #2980b9;
+    }
+
+    </style>
+
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="../forside/index.html" class="nav-logo">dyreKanalen</a>
+            <div class="nav-links">
+                <a href="../forside/index.html">Forside</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn">KaninKanalen</button>
+                    <div class="dropdown-content">
+                        <a href="../kanin/Kaninkanalen.html">Kaninkanalen</a>
+                        <a href="../kanin/kaninmad.html">Kaninmad</a>
+                        <a href="../kanin/tibur.html">Til buret</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Kattekanalen</button>
+                    <div class="dropdown-content">
+                        <a href="Kattekanalen.html">Kattekanalen</a>
+                        <a href="Kattefoder.html">Kattefoder</a>
+                        <a href="Kattelegetøj.html">Kattelegetøj</a>
+                        <a href="Kattepleje.html">Kattepleje</a>
+                        <a href="Katteudstyr.html" class="active">Katteudstyr</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">SkildpaddeKanalen</button>
+                    <div class="dropdown-content">
+                        <a href="../skildpadde/skildpadde.html">SkildpaddeKanalen</a>
+                        <a href="../skildpadde/skildpadefoder.html">Skildpadefoder</a>
+                        <a href="../skildpadde/Skildpadebur.html">SkildpaddeBur</a>
+                        <a href="../skildpadde/skildpaddepleje.html">Skildpaddepleje</a>
+                        <a href="../skildpadde/skildpaddeUdstyr.html">SkildpaddeUdstyr</a>
+                    </div>
+                </div>
+                <a href="../tips/tips-og-tricks.html">Tips og Tricks</a>
+
+            </div>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1>Katteudstyr</h1>
+    </div>
+    
+    <main class="content">
+        <h2>Essentielt Udstyr til Din Kat</h2>
+        
+        <div class="equipment-grid">
+            <div class="equipment-item">
+                <img src="kattebakke.jpg" alt="Kattebakke">
+                <h3>Kattebakker</h3>
+                <p>Lær om forskellige typer kattebakker og hvilken der passer bedst til din kat og dit hjem.</p>
+            </div>
+            <div class="equipment-item">
+                <img src="kradsetrae.jpg" alt="Kradsetræ">
+                <h3>Kradsetræer</h3>
+                <p>Forstå vigtigheden af kradsetræer for din kats sundhed og adfærd.</p>
+            </div>
+            <div class="equipment-item">
+                <img src="katteseng.jpg" alt="Katteseng">
+                <h3>Kattesenge</h3>
+                <p>Opdag forskellige typer af kattesenge og hvordan de kan forbedre din kats søvnkvalitet.</p>
+            </div>
+            <div class="equipment-item">
+                <img src="transportkasse.jpg" alt="Transportkasse">
+                <h3>Transportkasser</h3>
+                <p>Find ud af, hvordan du vælger den rigtige transportkasse til sikker og komfortabel transport af din kat.</p>
+            </div>
+            <div class="equipment-item">
+                <img src="madskaal.jpg" alt="Madskål">
+                <h3>Mad- og Vandskåle</h3>
+                <p>Lær om forskellige typer skåle og deres fordele for din kats spisevaner og hydreringsgrad.</p>
+            </div>
+            <div class="equipment-item">
+                <img src="kloesaks.jpg" alt="Klosaks">
+                <h3>Plejeprodukter</h3>
+                <p>Få indsigt i essentielle plejeprodukter til at holde din kat sund og velplejet.</p>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="../forside/index.html">Forside</a>
+            <a href="../kanin/Kaninkanalen.html">KaninKanalen</a>
+            <a href="Kattekanalen.html">KatteKanalen</a>
+            <a href="../skildpadde/skildpadde.html">SkildpaddeKanalen</a>
+            <a href="../tips/tips-og-tricks.html">Tips og Tricks</a>
+            <a href="../forside/om-os.html">Om Os</a>
+            <a href="../forside/kontakt.html">Kontakt</a>
+            <a href="../forside/nyhedsbrev.html">Tilmeld Nyhedsbrev</a>
+        </div>
+    </footer>
+        </div>
+
+
+        <section class="latest-news">
+            <h2>Seneste Nyt om Katteudstyr</h2>
+            <div class="news-grid">
+                <article class="news-item">
+                    <img src="news-smart-feeder.jpg" alt="Smart katteskål">
+                    <h3>Nye Smarte Katteskåle på Markedet</h3>
+                    <p>Opdag de nyeste teknologiske fremskridt inden for automatiserede fodringssystemer til katte...</p>
+                    <a href="#">Læs mere</a>
+                </article>
+                <article class="news-item">
+                    <img src="news-eco-litter.jpg" alt="Økologisk kattegrus">
+                    <h3>Økologisk Kattegrus Vinder Frem</h3>
+                    <p>Flere kattejere vælger miljøvenlige alternativer til traditionelt kattegrus...</p>
+                    <a href="#">Læs mere</a>
+                </article>
+                <article class="news-item">
+                    <img src="news-cat-furniture.jpg" alt="Moderne kattemøbler">
+                    <h3>Trendy Kattemøbler til det Moderne Hjem</h3>
+                    <p>Se de seneste designs i kattemøbler, der kombinerer funktionalitet med æstetik...</p>
+                    <a href="#">Læs mere</a>
+                </article>
+            </div>
+        </section>
+        
+        <section class="featured-articles">
+            <h2>Udvalgte Artikler og Tips</h2>
+            <div class="article-grid">
+                <article class="featured-article">
+                    <img src="article-choose-litter.jpg" alt="Vælg kattegrus">
+                    <h3>Sådan Vælger Du det Rigtige Kattegrus</h3>
+                    <p>En guide til at finde det perfekte kattegrus til din kræsne kat...</p>
+                    <a href="#">Læs mere</a>
+                </article>
+                <article class="featured-article">
+                    <img src="article-cat-toys.jpg" alt="Hjemmelavede kattelegetøj">
+                    <h3>10 Nemme Hjemmelavede Kattelegetøj</h3>
+                    <p>Lær hvordan du kan lave engagerende legetøj til din kat med ting fra hjemmet...</p>
+                    <a href="#">Læs mere</a>
+                </article>
+                <article class="featured-article">
+                    <img src="article-cat-scratching.jpg" alt="Kattekradsetips">
+                    <h3>Stop Uønsket Kradsen: Effektive Løsninger</h3>
+                    <p>Praktiske tips til at beskytte dine møbler og guide din kats kradsebehov...</p>
+                    <a href="#">Læs mere</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+    <button id="back-to-top" title="Tilbage til toppen">↑</button>
+</body>
+</html>

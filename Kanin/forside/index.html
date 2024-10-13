@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <style>
+        
+                .hero {
+            background-image: url('animal-food-background.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(to right, #f6d365, #fda085);
+        }
+        .hero h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2em;
+        }
+        .header h1 {
+            margin: 0;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+        .nav {
+            background-color: #34495e;
+            padding: 1em 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            transition: background-color 0.3s;
+        }
+        .nav a:hover {
+            background-color: #2c3e50;
+        }
+        .content {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        .food-icon {
+            font-size: 48px;
+            color: #e74c3c;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .food-item {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        .food-item:last-child {
+            border-bottom: none;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h3 {
+            color: #e74c3c;
+        }
+        .footer {
+            background-color: #34495e;
+            color: white;
+            padding: 2em 0;
+            text-align: center;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            transition: background-color 0.3s;
+        }
+        .footer-links a:hover {
+            background-color: #2c3e50;
+        }
+        .nav {
+        background-color: #34495e;
+        padding: 1em 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .nav-logo {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+    }
+    .nav-links {
+        display: flex;
+    }
+    .nav a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5em 1em;
+        transition: all 0.3s ease;
+        border-radius: 4px;
+    }
+    .nav a:hover, .nav a.active {
+        background-color: #2c3e50;
+        transform: translateY(-2px);
+    }
+    .dropdown {
+        position: relative;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #34495e;
+        min-width: 160px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .dropdown-content a {
+        display: block;
+        padding: 12px 16px;
+    }
+    .search-bar {
+        display: flex;
+        align-items: center;
+    }
+    .search-bar input {
+        padding: 5px;
+        border: none;
+        border-radius: 4px 0 0 4px;
+    }
+    .search-bar button {
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+    }
+        /* ... (rest of the styles) ... */
+           /* ... (previous styles remain the same) ... */
+        
+           .animal-category {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        .animal-category:last-child {
+            border-bottom: none;
+        }
+        .animal-category img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+    </style>
+    
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo">dyreKanalen</a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Forside</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn">KaninKanalen</button>
+                    <div class="dropdown-content">
+                        <a href="../kanin/Kaninkanalen.html">Kaninkanalen</a>
+                        <a href="../kanin/kaninmad.html">Kaninmad</a>
+                        <a href="../kanin/tibur.html">Til buret</a>
+                        
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Kattekanalen</button>
+                    <div class="dropdown-content">
+                        <a href="../kattekanalen/Kattekanalen.html">Kattekanalen</a>
+                            <a href="../kattekanalen/Kattefoder.html">kattefoder</a>
+                            <a href="../kattekanalen/Kattelegetøj.html">Kattelegetøj</a>
+                            <a href="../kattekanalen/Kattepleje.html">Kattepleje</a>
+                            <a href="../kattekanalen/Katteudstyr.html">Katteudstyr</a>
+
+                            </div>
+                            
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn">SkildpaddeKanalen</button>
+                            <div class="dropdown-content">
+                                <a href="../skildpadde/skildpadde.html">SkildpaddeKanalen</a>
+                                    <a href="../skildpadde/skildpadefoder.html">Skildpadefoder</a>
+                                    <a href="../skildpadde/Skildpadebur.html">SkildpaddeBur</a>
+                                    <a href="../skildpadde/skildpaddepleje.html">skildpaddepleje.html">skildpaddepleje</a>
+                                    <a href="../skildpadde/skildpaddeUdstyr.html">SkildpaddeUdstyr</a>
+                                    </div>
+
+                                    </div>
+                <a href="../tips/tips-og-tricks.html">Tips og Tricks</a>
+            </div>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1>Velkommen til dyreKanalen</h1>
+    </div>
+    
+    <div class="content">
+        <h2>Udforsk Vores Dyrekategorier</h2>
+        
+        <div class="animal-categories">
+            <div class="animal-category">
+                <img src="kat.jpg" alt="Kat">
+                <h3>Katte</h3>
+                <p>Tips til kattepleje, adfærd og det bedste katteudstyr.</p>
+                <a href="../kattekanalen/Kattekanalen.html">Udforsk katteverdenen</a>
+            </div>
+    
+            <div class="animal-category">
+                <img src="kanin.jpg" alt="Kanin">
+                <h3>Kaniner</h3>
+                <p>Lær om kaninpleje, fodring og hvordan du giver dit hoppevenner et godt hjem.</p>
+                <a href="../kanin/Kaninkanalen.html">Hop ind i kaninverdenen</a>
+            </div>
+    
+            <div class="animal-category">
+                <img src="skildpadde.jpg" alt="Skildpadde">
+                <h3>Skildpadder</h3>
+                <p>Opdage alt om skildpaddepleje, deres habitat og fascinerende adfærd.</p>
+                <a href="../skildpadde/skildpadde.html">Udforsk skildpaddernes verden</a>
+            </div>
+        </div>
+        
+        <!-- Rest of your content -->
+    </div>
+    
+        <h2>Seneste Nyt</h2>
+        <ul class="news-list">
+            <li><a href="#" class="news-item">Nye retningslinjer for dyrehold i byerne</a></li>
+            <li><a href="#" class="news-item">Top 10 legetøj til indendørs katte</a></li>
+            <li><a href="#" class="news-item">Sådan holder du din kanin sund og glad</a></li>
+        </ul>
+    </div>
+    <section class="featured-articles">
+        <h2 class="section-title">Udvalgte Artikler</h2>
+        <div class="article-grid">
+            <article class="featured-article">
+                <div class="article-image">
+                    <img src="article1.jpg" alt="Kat der bliver børstet" loading="lazy">
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title">10 Essentielle Tips til Kattepleje</h3>
+                    <p class="article-excerpt">Opdag hvordan du kan give din kat et sundt og lykkeligt liv med disse eksperttips...</p>
+                    <a href="artikel1.html" class="read-more-btn" aria-label="Læs mere om kattepleje">Læs mere</a>
+                </div>
+            </article>
+            <article class="featured-article">
+                <div class="article-image">
+                    <img src="article2.jpg" alt="Kanin der spiser grøntsager" loading="lazy">
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title">Den Ultimative Guide til Kaninens Kost</h3>
+                    <p class="article-excerpt">Lær alt om den optimale ernæring for din kanin og hvordan du sikrer en balanceret kost...</p>
+                    <a href="artikel2.html" class="read-more-btn" aria-label="Læs mere om kaninens kost">Læs mere</a>
+                </div>
+            </article>
+            <article class="featured-article">
+                <div class="article-image">
+                    <img src="article3.jpg" alt="Skildpadde i sit habitat" loading="lazy">
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title">Skab det Perfekte Skildpadde-Habitat</h3>
+                    <p class="article-excerpt">Få ekspertvejledning om hvordan du indretter det ideelle miljø for din skildpadde...</p>
+                    <a href="artikel3.html" class="read-more-btn" aria-label="Læs mere om skildpaddens habitat">Læs mere</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="quick-tips">
+        <h2>Vidste Du?</h2>
+        <div class="tip-container">
+            <div class="tip">
+                <i class="fas fa-lightbulb"></i>
+                <p>Katte sover i gennemsnit 15 timer om dagen!</p>
+            </div>
+            <div class="tip">
+                <i class="fas fa-carrot"></i>
+                <p>Kaniner kan hoppe op til 1 meter højt!</p>
+            </div>
+            <div class="tip">
+                <i class="fas fa-water"></i>
+                <p>Skildpadder kan leve over 100 år!</p>
+            </div>
+        </div>
+    </section>
+</section>
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="index.html">Forside</a>
+            <a href="../kattekanalen/Kattekanalen.html">Katte</a>
+            <a href="../kanin/Kaninkanalen.html">Kaniner</a>
+            <a href="../skildpadde/skildpadde.html"></a>
+            <a href="tips-og-tricks.html">Tips og Tricks</a>
+            <a href="om-os.html">Om Os</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="nyhedsbrev.html">Tilmeld Nyhedsbrev</a>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+    
+            // Scroll to top button
+            const scrollButton = document.getElementById('scroll-to-top');
+            scrollButton.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+        <button id="back-to-top">↑</button>
+    </script>
+</body>
+</html>

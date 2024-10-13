@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kattefoder - dyreKanalen</title>
+    <link rel="stylesheet" href="../forside/style.css">
+    <script src="../forside/script.js" defer></script>
+
+    <style>
+                        .hero {
+            background-image: url('animal-food-background.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(to right, #f6d365, #fda085);
+        }
+        .hero h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2em;
+        }
+        .header h1 {
+            margin: 0;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+        .nav {
+            background-color: #34495e;
+            padding: 1em 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            transition: background-color 0.3s;
+        }
+        .nav a:hover {
+            background-color: #2c3e50;
+        }
+        .content {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        .food-icon {
+            font-size: 48px;
+            color: #e74c3c;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .food-item {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        .food-item:last-child {
+            border-bottom: none;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h3 {
+            color: #e74c3c;
+        }
+        .footer {
+            background-color: #34495e;
+            color: white;
+            padding: 2em 0;
+            text-align: center;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            transition: background-color 0.3s;
+        }
+        .footer-links a:hover {
+            background-color: #2c3e50;
+        }
+        .nav {
+        background-color: #34495e;
+        padding: 1em 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .nav-logo {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+    }
+    .nav-links {
+        display: flex;
+    }
+    .nav a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5em 1em;
+        transition: all 0.3s ease;
+        border-radius: 4px;
+    }
+    .nav a:hover, .nav a.active {
+        background-color: #2c3e50;
+        transform: translateY(-2px);
+    }
+    .dropdown {
+        position: relative;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #34495e;
+        min-width: 160px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .dropdown-content a {
+        display: block;
+        padding: 12px 16px;
+    }
+    .search-bar {
+        display: flex;
+        align-items: center;
+    }
+    .search-bar input {
+        padding: 5px;
+        border: none;
+        border-radius: 4px 0 0 4px;
+    }
+    .search-bar button {
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+    }
+        /* ... (rest of the styles) ... */
+           /* ... (previous styles remain the same) ... */
+        
+           .animal-category {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        .animal-category:last-child {
+            border-bottom: none;
+        }
+        .animal-category img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+            /* ... (previous styles remain the same) ... */
+        
+            .food-category {
+                margin-bottom: 40px;
+                padding: 20px;
+                background-color: #f9f9f9;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+        
+            .food-item {
+                display: flex;
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #eee;
+            }
+        
+            .food-item:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+        
+            .food-item img {
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                border-radius: 8px;
+                margin-right: 20px;
+            }
+        
+            .food-item-content {
+                flex: 1;
+            }
+        
+            .food-item h3 {
+                margin-top: 0;
+                color: #e74c3c;
+            }
+        
+            .food-benefits {
+                list-style-type: none;
+                padding-left: 0;
+            }
+        
+            .food-benefits li {
+                margin-bottom: 5px;
+                padding-left: 20px;
+                position: relative;
+            }
+        
+            .food-benefits li::before {
+                content: '✓';
+                color: #27ae60;
+                position: absolute;
+                left: 0;
+            }
+        
+            .nutrition-info {
+                background-color: #e8f5e9;
+                padding: 10px;
+                border-radius: 4px;
+                margin-top: 10px;
+            }
+        
+            .nutrition-info h4 {
+                margin-top: 0;
+                color: #2c3e50;
+            }
+        </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="../forside/index.html" class="nav-logo">dyreKanalen</a>
+            <div class="nav-links">
+                <a href="../forside/index.html">Forside</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn">KaninKanalen</button>
+                    <div class="dropdown-content">
+                        <a href="../kanin/Kaninkanalen.html">Kaninkanalen</a>
+                        <a href="../kanin/kaninmad.html">Kaninmad</a>
+                        <a href="../kanin/tibur.html">Til buret</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Kattekanalen</button>
+                    <div class="dropdown-content">
+                        <a href="Kattekanalen.html">Kattekanalen</a>
+                        <a href="Kattefoder.html" class="active">Kattefoder</a>
+                        <a href="Kattelegetøj.html">Kattelegetøj</a>
+                        <a href="Kattepleje.html">Kattepleje</a>
+                        <a href="Katteudstyr.html">Katteudstyr</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">SkildpaddeKanalen</button>
+                    <div class="dropdown-content">
+                        <a href="../skildpadde/skildpadde.html">SkildpaddeKanalen</a>
+                        <a href="../skildpadde/skildpadefoder.html">Skildpadefoder</a>
+                        <a href="../skildpadde/Skildpadebur.html">SkildpaddeBur</a>
+                        <a href="../skildpadde/skildpaddepleje.html">Skildpaddepleje</a>
+                        <a href="../skildpadde/skildpaddeUdstyr.html">SkildpaddeUdstyr</a>
+                    </div>
+                </div>
+                <a href="../tips/tips-og-tricks.html">Tips og Tricks</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="hero">
+        <h1>Alt om Kattefoder på KatteKanalen</h1>
+    </div>
+    
+    <main class="content">
+        <h2>Forstå Din Kats Ernæringsbehov</h2>
+        
+        <div class="food-category">
+            <h3>Tørfoder til Katte</h3>
+            <div class="food-item">
+                <img src="dry-cat-food.jpg" alt="Tørfoder til katte">
+                <div class="food-item-content">
+                    <h3>Om Tørfoder</h3>
+                    <p>Tørfoder er en populær valgmulighed for mange katteejere. Her er nogle vigtige punkter at overveje:</p>
+                    <ul class="food-benefits">
+                        <li>Lang holdbarhed og nem opbevaring</li>
+                        <li>Hjælper med at holde tænderne rene</li>
+                        <li>Typisk mere koncentreret i næringsstoffer</li>
+                        <li>Vigtigt at sikre tilstrækkeligt vandindtag ved siden af</li>
+                    </ul>
+                    <div class="nutrition-info">
+                        <h4>Typisk næringsindhold i kvalitetstørfoder:</h4>
+                        <p>Protein: 30-40%, Fedt: 15-20%, Fiber: 2-4%, Fugt: 10%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="food-category">
+            <h3>Vådfoder til Katte</h3>
+            <div class="food-item">
+                <img src="wet-cat-food.jpg" alt="Vådfoder til katte">
+                <div class="food-item-content">
+                    <h3>Fordele ved Vådfoder</h3>
+                    <p>Vådfoder er en anden vigtig mulighed i kattens kost. Her er nogle fordele:</p>
+                    <ul class="food-benefits">
+                        <li>Højt vandindhold hjælper med hydrering</li>
+                        <li>Ofte mere smagfuldt for kræsne katte</li>
+                        <li>Kan være nemmere at fordøje for nogle katte</li>
+                        <li>Nyttig for katte med tandproblemer</li>
+                    </ul>
+                    <div class="nutrition-info">
+                        <h4>Typisk næringsindhold i kvalitetsvådfoder:</h4>
+                        <p>Protein: 8-12%, Fedt: 3-7%, Fiber: 1-2%, Fugt: 75-80%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="food-category">
+            <h3>Specialkost til Katte</h3>
+            <div class="food-item">
+                <img src="special-cat-food.jpg" alt="Specialkost til katte">
+                <div class="food-item-content">
+                    <h3>Når Din Kat Har Særlige Behov</h3>
+                    <p>Nogle katte kan have brug for specialkost af forskellige årsager:</p>
+                    <ul class="food-benefits">
+                        <li>Vægtkontrol for overvægtige katte</li>
+                        <li>Særlig kost for katte med nyreproblemer</li>
+                        <li>Hypoallergent foder for katte med fødevareallergi</li>
+                        <li>Alderspecifik kost for killinger eller ældre katte</li>
+                    </ul>
+                    <div class="nutrition-info">
+                        <h4>Vigtigt at huske:</h4>
+                        <p>Specialkost bør altid ske i samråd med en dyrlæge for at sikre, at din kats specifikke behov bliver mødt.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p>Husk, at hver kat er unik, og den bedste kost for din kat afhænger af faktorer som alder, helbred, aktivitetsniveau og personlige præferencer. Konsulter altid med en dyrlæge for at finde den bedste ernæringsplan for din kat.</p>
+    </main>
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="../forside/index.html">Forside</a>
+            <a href="../kanin/Kaninkanalen.html">KaninKanalen</a>
+            <a href="Kattekanalen.html">KatteKanalen</a>
+            <a href="../skildpadde/skildpadde.html">SkildpaddeKanalen</a>
+            <a href="../tips/tips-og-tricks.html">Tips og Tricks</a>
+            <a href="../forside/om-os.html">Om Os</a>
+            <a href="../forside/kontakt.html">Kontakt</a>
+            <a href="../forside/nyhedsbrev.html">Tilmeld Nyhedsbrev</a>
+        </div>
+    </footer>
+</body>
+</html>

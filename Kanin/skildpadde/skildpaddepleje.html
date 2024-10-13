@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skildpaddepleje - dyreKanalen</title>
+    <link rel="stylesheet" href="../forside/style.css">
+    <style>
+        .hero {
+            background-image: url('skildpadde-pleje-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .care-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .care-item {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .care-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .care-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .care-item h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .care-tips {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .care-tips li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="../forside/index.html" class="nav-logo">dyreKanalen</a>
+            <div class="nav-links">
+                <a href="../forside/index.html">Forside</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn">KaninKanalen</button>
+                    <div class="dropdown-content">
+                        <a href="../kanin/Kaninkanalen.html">Kaninkanalen</a>
+                        <a href="../kanin/kaninmad.html">Kaninmad</a>
+                        <a href="../kanin/tibur.html">Til buret</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Kattekanalen</button>
+                    <div class="dropdown-content">
+                        <a href="../kattekanalen/Kattekanalen.html">Kattekanalen</a>
+                        <a href="../kattekanalen/Kattefoder.html">Kattefoder</a>
+                        <a href="../kattekanalen/Kattelegetøj.html">Kattelegetøj</a>
+                        <a href="../kattekanalen/Kattepleje.html">Kattepleje</a>
+                        <a href="../kattekanalen/Katteudstyr.html">Katteudstyr</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">SkildpaddeKanalen</button>
+                    <div class="dropdown-content">
+                        <a href="skildpadde.html">SkildpaddeKanalen</a>
+                        <a href="skildpadefoder.html">Skildpadefoder</a>
+                        <a href="Skildpadebur.html">SkildpaddeBur</a>
+                        <a href="skildpaddepleje.html" class="active">Skildpaddepleje</a>
+                        <a href="skildpaddeUdstyr.html">SkildpaddeUdstyr</a>
+                    </div>
+                </div>
+                <a href="../tips/tips-og-tricks.html">Tips og Tricks</a>
+                <a href="../forside/om-os.html">Om Os</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Skildpaddepleje</h1>
+    </div>
+    
+    <main class="content">
+        <h2>Vigtige Aspekter af Skildpaddepleje</h2>
+        
+        <div class="care-grid">
+            <div class="care-item">
+                <img src="habitat-care.jpg" alt="Skildpadde habitat pleje">
+                <h3>Habitat Pleje</h3>
+                <ul class="care-tips">
+                    <li>Hold terrarien eller akvariet rent og hygiejnisk</li>
+                    <li>Skift vandet regelmæssigt i vandskildpadders akvarium</li>
+                    <li>Sørg for korrekt temperatur og luftfugtighed</li>
+                    <li>Tilbyd både sol- og skyggeområder</li>
+                    <li>Giv mulighed for at grave og gemme sig</li>
+                </ul>
+            </div>
+
+            <div class="care-item">
+                <img src="diet-care.jpg" alt="Skildpadde kost pleje">
+                <h3>Kost og Ernæring</h3>
+                <ul class="care-tips">
+                    <li>Tilbyd en varieret kost tilpasset din skildpaddes art</li>
+                    <li>Giv calcium-tilskud for sund skal-vækst</li>
+                    <li>Fodre unge skildpadder dagligt, voksne hver anden dag</li>
+                    <li>Undgå overfodring, som kan føre til helbredsproblemer</li>
+                    <li>Sørg altid for rent, frisk drikkevand</li>
+                </ul>
+            </div>
+
+            <div class="care-item">
+                <img src="health-care.jpg" alt="Skildpadde sundhedspleje">
+                <h3>Sundhedspleje</h3>
+                <ul class="care-tips">
+                    <li>Undersøg regelmæssigt for tegn på sygdom eller skader</li>
+                    <li>Hold øje med skallens tilstand og vækst</li>
+                    <li>Besøg dyrlægen årligt for sundhedstjek</li>
+                    <li>Vær opmærksom på ændringer i adfærd eller appetit</li>
+                    <li>Sørg for UVB-belysning for D-vitamin produktion</li>
+                </ul>
+            </div>
+
+            <div class="care-item">
+                <img src="handling-care.jpg" alt="Håndtering af skildpadde">
+                <h3>Håndtering og Socialisering</h3>
+                <ul class="care-tips">
+                    <li>Håndter din skildpadde forsigtigt og støt dens krop</li>
+                    <li>Vask altid hænder før og efter håndtering</li>
+                    <li>Lad skildpadden vænne sig gradvist til håndtering</li>
+                    <li>Undgå at forstyrre skildpadden under dvale</li>
+                    <li>Respekter skildpaddens naturlige adfærd og behov</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="../forside/index.html">Forside</a>
+            <a href="../kanin/Kaninkanalen.html">KaninKanalen</a>
+            <a href="../kattekanalen/Kattekanalen.html">KatteKanalen</a>
+            <a href="skildpadde.html">SkildpaddeKanalen</a>
+            <a href="../tips/tips-og-tricks.html">Tips og Tricks</a>
+            <a href="../forside/om-os.html">Om Os</a>
+            <a href="../forside/kontakt.html">Kontakt</a>
+            <a href="../forside/nyhedsbrev.html">Tilmeld Nyhedsbrev</a>
+        </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="Scroll to top">↑</button>
+
+    <script>
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

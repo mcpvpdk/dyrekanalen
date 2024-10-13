@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dyrekanalen Q&A</title>
+    <link rel="stylesheet" href="style.css">
+   To create a more interactive and visually appealing Q&A section, you can use HTML, CSS, and JavaScript. This version will include collapsible answers that expand when you click on the questions.
+
+**File: /Users/Jrb20/Documents/wep dev/Kanin/forside/index.html**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dyrekanalen Q&A</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .qna-section {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .qna-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .question {
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .question:hover {
+            background-color: #45a049;
+        }
+
+        .answer {
+            display: none;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="qna-section">
+        <div class="qna-item">
+            <div class="question">What is Dyrekanalen?</div>
+            <div class="answer">Dyrekanalen is a platform where animal lovers can share tips and experiences about their pets.</div>
+        </div>
+        <div class="qna-item">
+            <div class="question">How can I contribute to Dyrekanalen?</div>
+            <div class="answer">You can contribute by sharing your own tips and experiences in the comments section or by contacting us directly.</div>
+        </div>
+        <div class="qna-item">
+            <div class="question">What types of animals are featured on Dyrekanalen?</div>
+            <div class="answer">We feature a variety of animals including rabbits, cats, and turtles, among others.</div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>

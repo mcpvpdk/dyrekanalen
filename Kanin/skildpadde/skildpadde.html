@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skildpaddekanalen</title>
+    <link rel="stylesheet" href="../forside/style.css">
+    <script src="../forside/script.js" defer></script>
+
+    <style>
+      .featured-articles {
+          margin-top: 40px;
+      }
+      
+      .article-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 20px;
+      }
+      
+      .featured-article {
+          border: 1px solid #e0e0e0;
+          border-radius: 8px;
+          overflow: hidden;
+      }
+      
+      .article-image img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+      }
+      
+      .article-content {
+          padding: 15px;
+      }
+      
+      .article-title {
+          margin-top: 0;
+      }
+      
+      .read-more-btn {
+          display: inline-block;
+          padding: 5px 10px;
+          background-color: #20B2AA;
+          color: white;
+          text-decoration: none;
+          border-radius: 5px;
+          margin-top: 10px;
+      }
+      
+      .quick-tips {
+          margin-top: 40px;
+      }
+      
+      .tip-container {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+      }
+      
+      .tip {
+          flex-basis: calc(33% - 20px);
+          background-color: #f1f1f1;
+          padding: 15px;
+          border-radius: 8px;
+          margin-bottom: 20px;
+          text-align: center;
+      }
+      
+      .tip i {
+          font-size: 2em;
+          color: #20B2AA;
+          margin-bottom: 10px;
+      }
+        .hero {
+            background-image: url('turtle-background.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(to right, #66CDAA, #20B2AA);
+        }
+        .hero h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            color: white;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .content {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #20B2AA;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        h3 {
+            color: #20B2AA;
+        }
+
+        .animal-category {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .animal-category:last-child {
+            border-bottom: none;
+        }
+
+        .animal-category img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .news-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .news-item {
+            display: block;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #333;
+            transition: background-color 0.3s;
+        }
+
+        .news-item:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="../forside/index.html" class="nav-logo">dyreKanalen</a>
+            <div class="nav-links">
+                <a href="../forside/index.html">Forside</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn">KaninKanalen</button>
+                    <div class="dropdown-content">
+                        <a href="../kanin/Kaninkanalen.html">Kaninkanalen</a>
+                        <a href="../kanin/kaninmad.html">Kaninmad</a>
+                        <a href="../kanin/tibur.html">Til buret</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Kattekanalen</button>
+                    <div class="dropdown-content">
+                        <a href="../kattekanalen/Kattekanalen.html">Kattekanalen</a>
+                        <a href="../kattekanalen/Kattefoder.html">kattefoder</a>
+                        <a href="../kattekanalen/Kattelegetøj.html">Kattelegetøj</a>
+                        <a href="../kattekanalen/Kattepleje.html">Kattepleje</a>
+                        <a href="../kattekanalen/Katteudstyr.html">Katteudstyr</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">SkildpaddeKanalen</button>
+                    <div class="dropdown-content">
+                        <a href="../skildpadde/skildpadde.html" class="active">SkildpaddeKanalen</a>
+                        <a href="../skildpadde/skildpadefoder.html">Skildpadefoder</a>
+                        <a href="../skildpadde/Skildpadebur.html">SkildpaddeBur</a>
+                        <a href="../skildpadde/skildpaddepleje.html">skildpaddepleje</a>
+                        <a href="../skildpadde/skildpaddeUdstyr.html">SkildpaddeUdstyr</a>
+                    </div>
+                </div>
+                <a href="../forside/tips-og-tricks.html">Tips og Tricks</a>
+                <a href="../forside/om-os.html">Om Os</a>
+            </div>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1>Velkommen til Skildpaddekanalen</h1>
+    </div>
+    
+    <div class="content">
+        <h2>Udforsk Vores Skildpaddeindhold</h2>
+        
+        <div class="animal-categories">
+            <div class="animal-category">
+                <img src="skildpaddefoder.jpg" alt="Skildpaddefoder">
+                <h3>Skildpaddefoder</h3>
+                <p>Lær om den rigtige ernæring for din skildpadde.</p>
+                <a href="skildpadefoder.html">Udforsk skildpaddefoder</a>
+            </div>
+    
+            <div class="animal-category">
+                <img src="skildpaddebur.jpg" alt="Skildpaddebur">
+                <h3>Skildpaddebur</h3>
+                <p>Find ud af, hvordan du indretter det perfekte habitat for din skildpadde.</p>
+                <a href="Skildpadebur.html">Udforsk skildpaddehabitat</a>
+            </div>
+    
+            <div class="animal-category">
+                <img src="skildpaddepleje.jpg" alt="Skildpaddepleje">
+                <h3>Skildpaddepleje</h3>
+                <p>Opdage hvordan du bedst plejer din skildpadde.</p>
+                <a href="skildpaddepleje.html">Udforsk skildpaddepleje</a>
+            </div>
+        </div>
+    
+        <h2>Seneste Nyt om Skildpadder</h2>
+        <ul class="news-list">
+            <li><a href="#" class="news-item">Nye anbefalinger for skildpaddehold</a></li>
+            <li><a href="#" class="news-item">Top 5 indretningsidéer til skildpaddeterrarium</a></li>
+            <li><a href="#" class="news-item">Sådan holder du din skildpaddes skal sund</a></li>
+        </ul>
+    
+        <section class="featured-articles">
+            <h2 class="section-title">Udvalgte Artikler</h2>
+            <div class="article-grid">
+                <article class="featured-article">
+                    <div class="article-image">
+                        <img src="article1.jpg" alt="Skildpadde i et terrarium" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Sådan Indretter Du Det Perfekte Skildpaddeterrarium</h3>
+                        <p class="article-excerpt">Lær hvordan du kan skabe det ideelle miljø for din skildpadde med disse eksperttips...</p>
+                        <a href="artikel1.html" class="read-more-btn" aria-label="Læs mere om skildpaddeterrarium">Læs mere</a>
+                    </div>
+                </article>
+                <article class="featured-article">
+                    <div class="article-image">
+                        <img src="article2.jpg" alt="Skildpadde der spiser grøntsager" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Den Ultimative Guide til Skildpaddens Kost</h3>
+                        <p class="article-excerpt">Opdage alt om den optimale ernæring for din skildpadde og hvordan du sikrer en balanceret kost...</p>
+                        <a href="artikel2.html" class="read-more-btn" aria-label="Læs mere om skildpaddens kost">Læs mere</a>
+                    </div>
+                </article>
+                <article class="featured-article">
+                    <div class="article-image">
+                        <img src="article3.jpg" alt="Skildpadde der får et bad" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Essentiel Pleje af Din Skildpadde</h3>
+                        <p class="article-excerpt">Få ekspertvejledning om hvordan du bedst plejer din skildpadde for et sundt og lykkeligt liv...</p>
+                        <a href="artikel3.html" class="read-more-btn" aria-label="Læs mere om skildpaddepleje">Læs mere</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    
+        <section class="quick-tips">
+            <h2>Vidste Du?</h2>
+            <div class="tip-container">
+                <div class="tip">
+                    <i class="fas fa-shield-alt"></i>
+                    <p>Skildpadder kan trække deres hoved ind i skjoldet for beskyttelse!</p>
+                </div>
+                <div class="tip">
+                    <i class="fas fa-water"></i>
+                    <p>Nogle skildpadder kan ånde gennem deres bagdel under vand!</p>
+                </div>
+                <div class="tip">
+                    <i class="fas fa-birthday-cake"></i>
+                    <p>Den ældste kendte skildpadde levede til den var over 180 år gammel!</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="index.html">Forside</a>
+            <a href="../kattekanalen/Kattekanalen.html">Katte</a>
+            <a href="../kanin/Kaninkanalen.html">Kaniner</a>
+            <a href="../skildpadde/skildpadde.html"></a>
+            <a href="tips-og-tricks.html">Tips og Tricks</a>
+            <a href="om-os.html">Om Os</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="nyhedsbrev.html">Tilmeld Nyhedsbrev</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add smooth scrolling to all links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Add active class to current page in navigation
+            const currentPage = window.location.pathname.split("/").pop();
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                if (link.getAttribute('href').includes(currentPage)) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Simple form validation for search
+            const searchForm = document.querySelector('.search-bar');
+            if (searchForm) {
+                searchForm.addEventListener('submit', function(e) {
+                    const searchInput = this.querySelector('input');
+                    if (searchInput.value.trim() === '') {
+                        e.preventDefault();
+                        alert('Indtast venligst et søgeord');
+                    }
+                });
+            }
+        });
+        // Lazy loading for images
+document.addEventListener("DOMContentLoaded", function() {
+    var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+
+    if ("IntersectionObserver" in window) {
+        let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    let lazyImage = entry.target;
+                    lazyImage.src = lazyImage.dataset.src;
+                    lazyImage.classList.remove("lazy");
+                    lazyImageObserver.unobserve(lazyImage);
+                }
+            });
+        });
+
+        lazyImages.forEach(function(lazyImage) {
+            lazyImageObserver.observe(lazyImage);
+        });
+    } else {
+        // Fallback for browsers without IntersectionObserver support
+        lazyImages.forEach(function(lazyImage) {
+            lazyImage.src = lazyImage.dataset.src;
+        });
+    }
+});
+    </script>
+</body>
+</html>

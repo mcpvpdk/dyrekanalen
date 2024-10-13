@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KaninKanalen</title>
+    <link rel="stylesheet" href="../forside/style.css">
+    <script src="../script.js" defer></script>
+
+    <style>
+        .hero {
+            background-image: url('rabbit-background.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(to right, #a8e063, #56ab2f);
+        }
+        .hero h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            color: white;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2em;
+        }
+        .header h1 {
+            margin: 0;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+        .nav {
+            background-color: #34495e;
+            padding: 1em 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .nav-logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+        .nav a:hover, .nav a.active {
+            background-color: #2c3e50;
+            transform: translateY(-2px);
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #34495e;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            display: block;
+            padding: 12px 16px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        .search-bar input {
+            padding: 5px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+        .search-bar button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .content {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h3 {
+            color: #e74c3c;
+        }
+        .footer {
+            background-color: #34495e;
+            color: white;
+            padding: 2em 0;
+            text-align: center;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            transition: background-color 0.3s;
+        }
+        .footer-links a:hover {
+            background-color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="../forside/index.html" class="nav-logo">dyreKanalen</a>
+            <div class="nav-links">
+                <a href="../forside/index.html">Forside</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Kaniner</button>
+                    <div class="dropdown-content">
+                        <a href="Kaninkanalen.html" class="active">Kaninkanalen</a>
+                        <a href="kaninmad.html">Kaninmad</a>
+                        <a href="tibur.html">Til buret</a>
+                        <a href="græne.html">Grønne</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Kattekanalen</button>
+                    <div class="dropdown-content">
+                        <a href="../kattekanalen/Kattekanalen.html">Kattekanalen</a>
+                            <a href="../kattekanalen/Kattefoder.html">kattefoder</a>
+                            <a href="../kattekanalen/Kattelegetøj.html">Kattelegetøj</a>
+                            <a href="../kattekanalen/Kattepleje.html">Kattepleje</a>
+                            <a href="../kattekanalen/Katteudstyr.html">Katteudstyr</a>
+
+                            </div>
+                            
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn">SkildpaddeKanalen</button>
+                            <div class="dropdown-content">
+                                <a href="../skildpadde/skildpadde.html">SkildpaddeKanalen</a>
+                                    <a href="../skildpadde/skildpadefoder.html">Skildpadefoder</a>
+                                    <a href="../skildpadde/Skildpadebur.html">SkildpaddeBur/a>
+                                    <a href="../skildpadde/skildpaddepleje.html">skildpaddepleje</a>
+                                    <a href="../skildpadde/skildpadde.html">SkildpaddeUdstyr</a>
+                                    </div>
+
+                                    </div>
+            </div>
+            <a href="../tips/tips-og-tricks.html">Tips og Tricks</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Velkommen til KaninKanalen</h1>
+    </div>
+    
+    <div class="content">
+        <h2>Om KaninKanalen</h2>
+        <p>Her kan du lære alt om kaniner. Vi har samlet en masse information om kaniner, så du kan blive klogere på disse søde dyr. Du kan læse om, hvad kaniner spiser, hvordan de lever, og hvordan du bedst passer på din kanin.</p>
+
+        <h2>Udforsk Vores Kaninindhold</h2>
+        
+        <div class="animal-categories">
+            <div class="animal-category">
+                <img src="kaninmad.jpg" alt="Kaninmad">
+                <h3>Kaninmad</h3>
+                <p>Lær om den rigtige ernæring for din kanin.</p>
+                <a href="kaninmad.html">Udforsk kaninmad</a>
+            </div>
+    
+            <div class="animal-category">
+                <img src="kaninbur.jpg" alt="Til buret">
+                <h3>Til buret</h3>
+                <p>Find ud af, hvordan du indretter det perfekte kaninbur.</p>
+                <a href="tibur.html">Udforsk burindretningstips</a>
+            </div>
+    
+
+        </div>
+        
+        <h2>Seneste Nyt om Kaniner</h2>
+        <ul class="news-list">
+            <li><a href="#" class="news-item">Nye anbefalinger for kaninhold</a></li>
+            <li><a href="#" class="news-item">Top 5 legetøj til indendørs kaniner</a></li>
+            <li><a href="#" class="news-item">Sådan klipper du din kanins kløer sikkert</a></li>
+        </ul>
+    </div>
+
+    <section class="quick-tips">
+        <h2>Vidste Du?</h2>
+        <div class="tip-container">
+            <div class="tip">
+                <i class="fas fa-carrot"></i>
+                <p>Kaniner kan hoppe op til 1 meter højt!</p>
+            </div>
+            <div class="tip">
+                <i class="fas fa-home"></i>
+                <p>Kaniner er sociale dyr og trives bedst i par eller grupper.</p>
+            </div>
+            <div class="tip">
+                <i class="fas fa-tooth"></i>
+                <p>Kaninens tænder vokser konstant og skal slides ned med den rigtige kost.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="../forside/index.html">Forside</a>
+            <a href="../kattekanalen/Kattekanalen.html">Katte</a>
+            <a href="Kaninkanalen.html">Kaniner</a>
+            <a href="../skildpadde/skildpadde.html">Skildpadde</a>
+            <a href="../forside/tips-og-tricks.html">Tips og Tricks</a>
+            <a href="../forside/om-os.html">Om Os</a>
+            <a href="../forside/kontakt.html">Kontakt</a>
+            <a href="../forside/nyhedsbrev.html">Tilmeld Nyhedsbrev</a>
+        </div>
+    </footer>
+
+    <button id="back-to-top">↑</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+    
+            // Scroll to top button
+            const scrollButton = document.getElementById('back-to-top');
+            scrollButton.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Show/hide scroll to top button
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    scrollButton.style.display = 'block';
+                } else {
+                    scrollButton.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</

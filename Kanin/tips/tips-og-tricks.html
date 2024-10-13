@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips og Tricks - dyreKanalen</title>
+    <link rel="stylesheet" href="../forside/style.css">
+    <style>
+        .hero {
+            background-image: url('tips-og-tricks-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .tip-item {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .tip-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .tip-item h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .tip-item ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .tip-item li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="../forside/index.html" class="nav-logo">dyreKanalen</a>
+            <div class="nav-links">
+                <a href="../forside/index.html">Forside</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn">KaninKanalen</button>
+                    <div class="dropdown-content">
+                        <a href="../kanin/Kaninkanalen.html">Kaninkanalen</a>
+                        <a href="../kanin/kaninmad.html">Kaninmad</a>
+                        <a href="../kanin/tibur.html">Til buret</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Kattekanalen</button>
+                    <div class="dropdown-content">
+                        <a href="../katte/Kattekanalen.html">Kattekanalen</a>
+                        <a href="../katte/Kattefoder.html">Kattefoder</a>
+                        <a href="../katte/Kattelegetøj.html">Kattelegetøj</a>
+                        <a href="../katte/Kattepleje.html">Kattepleje</a>
+                        <a href="../katte/Katteudstyr.html">Katteudstyr</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">SkildpaddeKanalen</button>
+                    <div class="dropdown-content">
+                        <a href="../skildpadde/skildpadde.html">SkildpaddeKanalen</a>
+                        <a href="../skildpadde/skildpadefoder.html">Skildpadefoder</a>
+                        <a href="../skildpadde/Skildpadebur.html">SkildpaddeBur</a>
+                        <a href="../skildpadde/skildpaddepleje.html">Skildpaddepleje</a>
+                        <a href="../skildpadde/skildpaddeUdstyr.html">SkildpaddeUdstyr</a>
+                    </div>
+                </div>
+                <a href="tips-og-tricks.html" class="active">Tips og Tricks</a>
+                <a href="../forside/om-os.html">Om Os</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Tips og Tricks</h1>
+    </div>
+    
+    <main class="content">
+        <h2>Nyttige Tips og Tricks til Kæledyrsejere</h2>
+        
+        <div class="tips-grid">
+            <div class="tip-item">
+                <h3>Generelle Tips</h3>
+                <ul>
+                    <li>Sørg for regelmæssige dyrlægebesøg</li>
+                    <li>Hold dit kæledyr i en sund vægt</li>
+                    <li>Giv dit kæledyr masser af motion og stimulation</li>
+                    <li>Sørg for frisk vand altid er tilgængeligt</li>
+                    <li>Opret en rutine for fodring og pleje</li>
+                </ul>
+            </div>
+
+            <div class="tip-item">
+                <h3>Kanin Tips</h3>
+                <ul>
+                    <li>Giv din kanin masser af hø</li>
+                    <li>Sørg for et stort bur eller løbegård</li>
+                    <li>Tilbyd varierede grøntsager dagligt</li>
+                    <li>Giv mulighed for at grave og gnave</li>
+                    <li>Socialize din kanin regelmæssigt</li>
+                </ul>
+            </div>
+
+            <div class="tip-item">
+                <h3>Katte Tips</h3>
+                <ul>
+                    <li>Giv din kat et kradsetræ</li>
+                    <li>Rengør kattebakken dagligt</li>
+                    <li>Børst din kat regelmæssigt</li>
+                    <li>Tilbyd interaktivt legetøj</li>
+                    <li>Skab høje siddepladser for din kat</li>
+                </ul>
+            </div>
+
+            <div class="tip-item">
+                <h3>Skildpadde Tips</h3>
+                <ul>
+                    <li>Sørg for korrekt belysning og varme</li>
+                    <li>Giv en varieret kost tilpasset arten</li>
+                    <li>Rengør akvariet eller terrarier regelmæssigt</li>
+                    <li>Tilbyd gemmesteder og baskeområder</li>
+                    <li>Hold øje med skjoldets sundhed</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="../forside/index.html">Forside</a>
+            <a href="../kanin/Kaninkanalen.html">KaninKanalen</a>
+            <a href="../katte/Kattekanalen.html">KatteKanalen</a>
+            <a href="../skildpadde/skildpadde.html">SkildpaddeKanalen</a>
+            <a href="tips-og-tricks.html">Tips og Tricks</a>
+            <a href="../forside/om-os.html">Om Os</a>
+            <a href="../forside/kontakt.html">Kontakt</a>
+            <a href="../forside/nyhedsbrev.html">Tilmeld Nyhedsbrev</a>
+        </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="Scroll to top">↑</button>
+
+    <script>
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

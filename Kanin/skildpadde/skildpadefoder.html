@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skildpaddefoder - dyreKanalen</title>
+    <link rel="stylesheet" href="../forside/style.css">
+    <style>
+        .hero {
+            background-image: url('skildpadde-foder-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .food-item {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .food-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .food-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .food-item h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .food-benefits {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .food-benefits li {
+            margin-bottom: 5px;
+        }
+
+        .nutrition-info {
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="../forside/index.html" class="nav-logo">dyreKanalen</a>
+            <div class="nav-links">
+                <a href="../forside/index.html">Forside</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn">KaninKanalen</button>
+                    <div class="dropdown-content">
+                        <a href="../kanin/Kaninkanalen.html">Kaninkanalen</a>
+                        <a href="../kanin/kaninmad.html">Kaninmad</a>
+                        <a href="../kanin/tibur.html">Til buret</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Kattekanalen</button>
+                    <div class="dropdown-content">
+                        <a href="../katte/Kattekanalen.html">Kattekanalen</a>
+                        <a href="../katte/Kattefoder.html">Kattefoder</a>
+                        <a href="../katte/Kattelegetøj.html">Kattelegetøj</a>
+                        <a href="../katte/Kattepleje.html">Kattepleje</a>
+                        <a href="../katte/Katteudstyr.html">Katteudstyr</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">SkildpaddeKanalen</button>
+                    <div class="dropdown-content">
+                        <a href="skildpadde.html">SkildpaddeKanalen</a>
+                        <a href="skildpadefoder.html" class="active">Skildpadefoder</a>
+                        <a href="Skildpadebur.html">SkildpaddeBur</a>
+                        <a href="skildpaddepleje.html">Skildpaddepleje</a>
+                        <a href="skildpaddeUdstyr.html">SkildpaddeUdstyr</a>
+                    </div>
+                </div>
+                <a href="../tips/tips-og-tricks.html">Tips og Tricks</a>
+                <a href="../forside/om-os.html">Om Os</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Skildpaddefoder</h1>
+    </div>
+    
+    <main class="content">
+        <h2>Ekspert Guide til Skildpaddefoder</h2>
+        
+        <div class="food-grid">
+            <div class="food-item">
+                <img src="vandskildpadde-foder.jpg" alt="Foder til vandskildpadder">
+                <h3>Foder til Vandskildpadder</h3>
+                <p>Næringsrigt foder specielt udviklet til vandskildpadders behov.</p>
+                <ul class="food-benefits">
+                    <li>Høj protein- og calciumindhold</li>
+                    <li>Indeholder vitaminer A og D3</li>
+                    <li>Flydende piller for nem fodring</li>
+                    <li>Understøtter sund skjold- og knoglevækst</li>
+                </ul>
+                <div class="nutrition-info">
+                    <h4>Næringsindhold:</h4>
+                    <p>Protein: 40%, Fedt: 6%, Fiber: 3%, Fugt: 8%</p>
+                </div>
+            </div>
+
+            <div class="food-item">
+                <img src="landskildpadde-foder.jpg" alt="Foder til landskildpadder">
+                <h3>Foder til Landskildpadder</h3>
+                <p>Alsidig blanding af tørrede grøntsager og urter til landskildpadder.</p>
+                <ul class="food-benefits">
+                    <li>Rig på fibre og naturlige næringsstoffer</li>
+                    <li>Lavt fedtindhold for sund vægt</li>
+                    <li>Indeholder calciumtilskud</li>
+                    <li>Varieret sammensætning for stimulering</li>
+                </ul>
+                <div class="nutrition-info">
+                    <h4>Næringsindhold:</h4>
+                    <p>Protein: 15%, Fedt: 3%, Fiber: 18%, Fugt: 10%</p>
+                </div>
+            </div>
+
+            <div class="food-item">
+                <img src="skildpadde-godbidder.jpg" alt="Skildpadde godbidder">
+                <h3>Skildpadde Godbidder</h3>
+                <p>Lækre og sunde godbidder til både vand- og landskildpadder.</p>
+                <ul class="food-benefits">
+                    <li>Fremstillet af naturlige ingredienser</li>
+                    <li>Rig på vitaminer og mineraler</li>
+                    <li>Perfekt til træning og belønning</li>
+                    <li>Understøtter varieret kost</li>
+                </ul>
+                <div class="nutrition-info">
+                    <h4>Næringsindhold:</h4>
+                    <p>Protein: 30%, Fedt: 5%, Fiber: 4%, Fugt: 15%</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="../forside/index.html">Forside</a>
+            <a href="../kanin/Kaninkanalen.html">KaninKanalen</a>
+            <a href="../katte/Kattekanalen.html">KatteKanalen</a>
+            <a href="skildpadde.html">SkildpaddeKanalen</a>
+            <a href="../tips/tips-og-tricks.html">Tips og Tricks</a>
+            <a href="../forside/om-os.html">Om Os</a>
+            <a href="../forside/kontakt.html">Kontakt</a>
+            <a href="../forside/nyhedsbrev.html">Tilmeld Nyhedsbrev</a>
+        </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="Scroll to top">↑</button>
+
+    <script>
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
